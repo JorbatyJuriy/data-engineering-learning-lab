@@ -13,7 +13,14 @@ services:
       - "${POSTGRES_PORT}:5432"
 
     volumes:
+      # Persistent PostgreSQL database files.
       - postgres_data:/var/lib/postgresql
+
+      # Generated TPC-H CSV files.
+      # ./data — шлях відносно compose.yaml у WSL.
+      # /data — шлях, який бачить PostgreSQL-контейнер.
+      # ro — контейнер може лише читати файли.
+      - ./data:/data:ro
 
     shm_size: 256mb
 
