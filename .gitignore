@@ -1,0 +1,17 @@
+# JetBrains IDE
+.idea/
+
+# Python
+**/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Local environment files with credentials
+**/.env
+
+# Generated PostgreSQL laboratory data
+labs/postgresql/data/
+
+# Generated local DuckDB databases, if they appear later
+*.duckdb
+*.duckdb.wal
